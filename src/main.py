@@ -6,6 +6,7 @@ from src.controllers.strategies.q_nodes_memo import QNodesMemo
 def iniciar():
     """Punto de entrada principal"""
                     # ABCD #
+
     estado_inicial = "1000000000"
     condiciones =    "1111111111"
     alcance =        "1101101101"
@@ -15,6 +16,7 @@ def iniciar():
 
     ### Ejemplo de solución mediante módulo de fuerza bruta ###
     analizador_fb = QNodesMemo(gestor_sistema)
+
     sia_uno = analizador_fb.aplicar_estrategia(
         condiciones,
         alcance,

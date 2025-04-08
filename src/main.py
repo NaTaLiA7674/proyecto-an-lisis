@@ -1,16 +1,16 @@
 from src.controllers.manager import Manager
-
+import time
 from src.controllers.strategies.q_nodes_memo import QNodesMemo
 
 
 def iniciar():
     """Punto de entrada principal"""
                     # ABCD #
-
-    estado_inicial = "1000000000"
-    condiciones =    "1111111111"
-    alcance =        "1101101101"
-    mecanismo =      "1010101010"
+    inicio = time.time()
+    estado_inicial = "100000000000000"
+    condiciones =    "111111111111111"
+    alcance =        "111111111111111"
+    mecanismo =      "111111111111111"
 
     gestor_sistema = Manager(estado_inicial)
 
@@ -23,3 +23,6 @@ def iniciar():
         mecanismo,
     )
     print(sia_uno)
+
+    fin = time.time()
+    print(f"Tiempo de ejecución: {fin - inicio:.4f} segundos")
